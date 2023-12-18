@@ -1,0 +1,19 @@
+
+
+.member-card{
+    border-radius: 8px;
+    background-color: #F5F5F5;
+    color: black;
+    padding: 2%;
+    margin: 0 1rem 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.amount-negative{
+    color: red;
+}
+
+.amount-positive{
+    color: #25E485;
+}

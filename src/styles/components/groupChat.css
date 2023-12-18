@@ -1,0 +1,111 @@
+.chat-section{
+    overflow-y: scroll;
+    background-color: #F5F5F5;
+    color: black;
+    padding-top: 1%;
+    height: 800px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-self: center;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .message-from-user{
+    background-color: #0EBEBE;
+    justify-self: flex-end;
+    border-radius: 25px 0 25px 25px;
+    padding: 0 25px;
+    min-height: 50px;
+    margin-bottom: 5%;
+    margin-right: 2%;
+  }
+  
+  .message-from-other{
+    background-color: #D6D6D6;
+    justify-self: flex-start;
+    border-radius: 0 25px 25px 25px;
+    min-width: 200px;
+    min-height: 50px;
+    margin-bottom: 5%;
+    margin-left: 2%;
+  }
+  
+  .expense-from-user{
+    background-color: #F4E04D;
+    justify-self: flex-end;
+    border-radius: 25px 0 25px 25px;
+    min-width: 200px;
+    min-height: 50px;
+    margin-bottom: 5%;
+    margin-right: 2%;
+    border-style: solid;
+    border: color(srgb red green blue);
+    transition: transform 0.3s ease;
+
+  }
+  .expense-from-user:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  .expense-from-other{
+    background-color: #F4E04D;
+    justify-self: flex-start;
+    border-radius: 0 25px 25px 25px;
+    min-width: 200px;
+    min-height: 50px;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    border-style: solid;
+    border: color(srgb red green blue);
+
+  }
+  
+  .amount{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .input-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .message-and-send{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    background-color: #F5F5F5;
+    border-radius: 0 0 8px 8px;
+    border-top: solid;
+    border-color: black;
+  }
+  
+  .chat-input{
+    width: 98%;
+    justify-self: flex-start;
+    margin: 0;
+    background-color: #F5F5F5;
+    color: black;
+    border-radius: 0 0 0 8px;
+    outline: none;
+    border: none;
+    height: 2.5rem;
+    font-size: large;
+  }
+
+  .send-button{
+    padding: 0;
+    border-radius: 0 0 8px 0;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  .group-name{
+    transition: transform 0.3s ease;
+  }
+
+  .group-name:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }

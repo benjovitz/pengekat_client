@@ -1,0 +1,23 @@
+.group-card{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 25px;
+    background-color: #FCFCFC;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+.group-card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.background-div{
+    background-image: url("https://media.cntraveler.com/photos/590a352ca71e701c036ce1e1/master/pass/thai-islands-ko-samui-GettyImages-171623188.jpg");
+    background-size: cover;
+    border-radius: 25px 25px 0 0;
+}
+.negative{
+    color: red;
+}
+.positive{
+    color: #25E485;
+}

@@ -1,11 +1,11 @@
 <script>
 	import  { useNavigate, useLocation, navigate } from "svelte-navigator";
-	import { user } from "../../stores/userStore";
+	import { USER_ID } from "../../stores/generalStore";
     import toast, {Toaster} from "svelte-french-toast"
-
 	const useNavigation = useNavigate();
 	const location = useLocation();
 
+    
     
 	let username;
 	let password;
@@ -23,8 +23,8 @@
             if(!response.ok){
                 toast.error(result.data)
         } else {
-            toast.success(result.data)
-            user.set({ username, password });
+            toast.success(result.data.message)
+            USER_ID.set(result.data.userId);
             const from = ($location.state && $location.state.from) || "/";
 		    useNavigation(from, { replace: true });
         } 
