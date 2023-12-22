@@ -2,7 +2,6 @@
     import { USER_ID, BASE_URL, GROUP_ID } from "../../stores/generalStore";
     import toast, {Toaster} from "svelte-french-toast";
     import Modal from "../../components/Modal/Modal.svelte";
-    import { socket } from "../../stores/generalStore";
 
     export let message
     let showModal = false
@@ -17,9 +16,10 @@
                 "content-type": "application/json"
                     },
                 })
-                
+                const result = await response.json()
+                toast.success(result.data)
         } catch (error) {
-            
+            toast.error(error)
         }
     }
 </script>
@@ -33,14 +33,14 @@ class:message-from-user={message._userId === $USER_ID}
 </div> 
 {:else if message._userId !== $USER_ID}
 <div class="expense-from-other">
-    <span><b>{message.comment}</b></span> <br>
-    <span class="amount">{message.amount} {message.currency}</span>
+    <span><b>{message.comment}</b></span> <br> 
+    <span class="amount">{message.original_amount || message.amount} {message.currency}</span>
     </div>
 {:else}
 <div on:click={() => (showModal = true)}
 class="expense-from-user">
 <span><b>{message.comment}</b></span> <br>
-<span class="amount">{message.amount} {message.currency}</span>
+<span class="amount">{message.original_amount || message.amount} {message.currency}</span>
 </div>
 {/if}
 
