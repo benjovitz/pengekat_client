@@ -16,6 +16,7 @@
             credentials: "include"
         })
 	}
+
 </script>
 
 
@@ -23,11 +24,11 @@
 	<header>
 		<nav class="nav">
       {#if $USER_ID}
-      <Link to="groups">Groups </Link>
+      <Link to="groups">Pengekatte </Link>
+      <Link to="signOut">Log ud </Link>
       {:else}
       <Link to="login">Login</Link>
       {/if}
-			<Link to="contact">Contact</Link>
 		</nav>
 	</header>
 
@@ -38,6 +39,9 @@
 		<Route path="login">
 			<Login />
 		</Route>
+    <PrivateRoute path="signOut">
+      <button on:click={handleLogout}>Log ud</button>
+    </PrivateRoute>
     
     <Route path="signup">
       <SignUp />
@@ -50,7 +54,6 @@
       <Forgot />
     </Route>
     
-  
   <PrivateRoute path="groups" let:location >
     <Groups />
   </PrivateRoute>

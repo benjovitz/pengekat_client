@@ -15,37 +15,40 @@
     background-color: #0EBEBE;
     justify-self: flex-end;
     border-radius: 25px 0 25px 25px;
-    padding: 0 25px;
+    padding: 0 1rem 0 1rem;
+    min-width: fit-content;
     min-height: 50px;
     margin-bottom: 5%;
     margin-right: 2%;
+    text-align: end;
   }
   
   .message-from-other{
     background-color: #D6D6D6;
     justify-self: flex-start;
     border-radius: 0 25px 25px 25px;
-    min-width: 200px;
+    min-width: fit-content;
     min-height: 50px;
     margin-bottom: 5%;
     margin-left: 2%;
+    text-align:start;
+    padding: 0 1rem 0 1rem;
   }
   
   .expense-from-user{
     background-color: #F4E04D;
     justify-self: flex-end;
     border-radius: 25px 0 25px 25px;
-    min-width: 200px;
-    min-height: 50px;
+    width: 95%;
+    min-height: 4rem;
     margin-bottom: 5%;
     margin-right: 2%;
     border-style: solid;
     border: color(srgb red green blue);
     transition: transform 0.3s ease;
-
   }
   .expense-from-user:hover{
-    transform: scale(1.1);
+    transform: scale(1.03);
     cursor: pointer;
   }
   
@@ -53,8 +56,8 @@
     background-color: #F4E04D;
     justify-self: flex-start;
     border-radius: 0 25px 25px 25px;
-    min-width: 200px;
-    min-height: 50px;
+    width: 95%;
+    min-height: 4rem;
     margin-bottom: 5%;
     margin-left: 2%;
     border-style: solid;
@@ -63,7 +66,7 @@
   }
   
   .amount{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 
@@ -108,4 +111,9 @@
   .group-name:hover{
     transform: scale(1.1);
     cursor: pointer;
+  }
+
+  .settings-modal{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }

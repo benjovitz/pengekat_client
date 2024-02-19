@@ -8,7 +8,7 @@
 
     async function handleDeleteExpense(){
         try {
-            const response = await fetch($BASE_URL + "api/groups/" + $GROUP_ID + "/expense", {
+            const response = await fetch($BASE_URL + "api/groups/" + $GROUP_ID + "/expenses", {
                 credentials: "include",
                 method: "DELETE",
                 body: JSON.stringify({expenseId: message._id}),
@@ -45,8 +45,8 @@ class="expense-from-user">
 {/if}
 
 <Modal bind:showModal > 
-    <h2 slot="header">delete expense</h2>
-    <button on:click={handleDeleteExpense}>delete expense</button>
+    <h2 slot="header">slet udgift</h2>
+    <button on:click={handleDeleteExpense}>slet udgift</button>
 </Modal>
 
 <Toaster />

@@ -32,11 +32,10 @@
     
 </script>
 
-<h1>Sign in</h1>
+<h1>Log ind</h1>
 <input bind:value={username} type="text" placeholder="username"> <br>
 <input bind:value={password} type="password" placeholder="password"><br>
-<button on:click={signIn}>sign in</button>
-<button on:click={() => navigate("signup")}>sign up</button> <br>
-<button on:click={() => navigate("forgot")}>forgor? 💀</button> <br>
+<button on:click={signIn}>Login</button>
+<button on:click={() => navigate("signup")}>Opret</button> <br>
 
 <Toaster />

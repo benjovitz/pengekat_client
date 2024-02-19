@@ -16,7 +16,7 @@
 		<hr />
 		<slot />
 		<hr />
-		<button autofocus on:click={() => dialog.close()}>close</button>
+		<button autofocus on:click={() => dialog.close()}>luk</button>
 	</div>
 </dialog>
 
