@@ -25,8 +25,7 @@
         } else {
             toast.success(result.data.message)
             USER_ID.set(result.data.userId);
-            const from = ($location.state && $location.state.from) || "/";
-		    useNavigation(from, { replace: true });
+		    useNavigation("/groups", { replace: true });
         } 
     }
     

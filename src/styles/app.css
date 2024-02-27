@@ -4,6 +4,7 @@
 @import "./components/nav.css";
 @import "./components/modal.css";
 @import "./components/memberCard.css";
+@import "../components/payment/payment.css";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

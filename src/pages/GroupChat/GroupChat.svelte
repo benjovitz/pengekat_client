@@ -10,6 +10,7 @@
   import AddMember from "../../components/AddMember/AddMember.svelte";
   import ModifyGroup from "../../components/ModifyGroup/ModifyGroup.svelte"
   import LeaveGroup from "../../components/LeaveGroup/LeaveGroup.svelte";
+  import Payment from "../../components/payment/payment.svelte";
 
   onMount(async() => {
     const messagesResponse = await getMessages()
@@ -93,7 +94,7 @@
 {/each}
 </section> 
 
-<div>Paypal payment</div>
+<Payment />
 
 </section>
 <section class="grid-3">

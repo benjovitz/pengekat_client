@@ -3,11 +3,12 @@
     background-color: #F5F5F5;
     color: black;
     padding-top: 1%;
-    height: 800px;
+    height: 500px;
     width: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-self: center;
+    align-items: center;
     border-radius: 8px 8px 0 0;
   }
 
@@ -31,7 +32,7 @@
     min-height: 50px;
     margin-bottom: 5%;
     margin-left: 2%;
-    text-align:start;
+    text-align: start;
     padding: 0 1rem 0 1rem;
   }
   

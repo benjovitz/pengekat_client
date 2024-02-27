@@ -14,10 +14,6 @@
       members.map(member => member.share = 0)
     })
 
-    function handleChangeShare(){
-      
-    }
-
     async function handleAddExpense(){
     if(!amount || amount <= 0 || !Number(amount)){
       toast.error("Indtast et deleligt beløb")
@@ -30,8 +26,6 @@
         members.map(member => {
           shareOverview.push({userId: member._userId, share: member.share})
         })
-        console.log(members)
-        return
       } else {
         members.map(member => {
           shareOverview.push({userId: member._userId, share: amount / members.length})
@@ -64,7 +58,7 @@
       <div>Mangler: {amount - members.reduce((accumulator, currentObj) => accumulator + currentObj.share, 0)}</div>
         {#each members as member, i}
         <span>{member.username}</span> <br>
-        <input on:change={handleChangeShare} placeholder={(amount / members.length).toString()} type="number" bind:value={members[i].share}> <br> 
+        <input placeholder={(amount / members.length).toString()} type="number" bind:value={members[i].share}> <br> 
         {/each} 
       {/if}
       
