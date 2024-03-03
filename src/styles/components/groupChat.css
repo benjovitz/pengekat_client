@@ -83,6 +83,7 @@
     border-radius: 0 0 8px 8px;
     border-top: solid;
     border-color: black;
+    height: fit-content;
   }
   
   .chat-input{
