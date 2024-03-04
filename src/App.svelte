@@ -9,6 +9,7 @@
   import Forgot from "./pages/Forgot/Forgot.svelte";
   import Groups from "./pages/Groups/Groups.svelte";
   import GroupChat from "./pages/GroupChat/GroupChat.svelte";
+  import Navbar from "./components/Navbar/Navbar.svelte";
 
   async function handleLogout() {
 		$USER_ID = null;
@@ -21,16 +22,7 @@
 
 
 <Router>
-	<header>
-		<nav class="nav">
-      {#if $USER_ID}
-      <Link to="groups">Pengekatte </Link>
-      <Link to="signOut">Log ud </Link>
-      {:else}
-      <Link to="login">Login</Link>
-      {/if}
-		</nav>
-	</header>
+    <Navbar />
 
   <main>
     <Route path="/" >

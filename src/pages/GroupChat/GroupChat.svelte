@@ -10,7 +10,7 @@
   import AddMember from "../../components/AddMember/AddMember.svelte";
   import ModifyGroup from "../../components/ModifyGroup/ModifyGroup.svelte"
   import LeaveGroup from "../../components/LeaveGroup/LeaveGroup.svelte";
-  import Payment from "../../components/payment/payment.svelte";
+  import Payment from "../../components/Payment/Payment.svelte";
 
   onMount(async() => {
     const messagesResponse = await getMessages()

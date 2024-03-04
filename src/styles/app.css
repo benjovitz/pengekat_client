@@ -1,10 +1,10 @@
-@import "./components/groupCard.css";
-@import "./components/groupChat.css";
-@import "./components/groups.css";
-@import "./components/nav.css";
-@import "./components/modal.css";
-@import "./components/memberCard.css";
-@import "../components/payment/payment.css";
+@import "../components/groupCard/GroupCard.css";
+@import "../pages/GroupChat/GroupChat.css";
+@import "../pages/Groups/Groups.css";
+@import "../components/Navbar/Navbar.css";
+@import "../components/Modal/Modal.css";
+@import "../components/MemberCard/MemberCard.css";
+@import "../components/Payment/Payment.css";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
