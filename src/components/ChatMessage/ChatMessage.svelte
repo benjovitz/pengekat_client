@@ -29,6 +29,7 @@
 class:message-from-other={message._userId !== $USER_ID}
 class:message-from-user={message._userId === $USER_ID}
 >
+<div>{message.username}</div>
 <span>{message.comment}</span>
 </div> 
 {:else if message._userId !== $USER_ID}

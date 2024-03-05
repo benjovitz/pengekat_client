@@ -22,7 +22,7 @@
 
 <div>
     <input bind:value={groupName} type="text" placeholder="gruppenavn">
-    <input id="groupPhotoFile"style="margin-left: 4.3rem;" type="file">
+    <input id="groupPhotoFile"style="margin-left: 4.3rem;" type="file" accept="image/*">
    
     <button on:click={handleModifyGroup}>gem ændringer</button>
   </div>

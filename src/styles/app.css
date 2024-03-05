@@ -5,6 +5,7 @@
 @import "../components/Modal/Modal.css";
 @import "../components/MemberCard/MemberCard.css";
 @import "../components/Payment/Payment.css";
+@import "../components/ChatMessage/ChatMessage.css";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

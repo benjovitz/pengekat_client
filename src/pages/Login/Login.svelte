@@ -36,7 +36,7 @@
 <input bind:value={password} type="password" placeholder="password"><br>
 <button on:click={signIn}>Login</button>
 <button on:click={() => navigate("signup")}>Opret</button> <br>
-<img src="../public/gatekeeper.png">
+<img src="../public/android-chrome-512x512.png">
 
 
 <Toaster />

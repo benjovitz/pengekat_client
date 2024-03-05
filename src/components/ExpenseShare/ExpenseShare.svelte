@@ -8,15 +8,15 @@
     let equalShare = true
     let currency
     let comment = ""
-    let changeableAmount = true
 
-    onMount(() => {
-      members.map(member => member.share = 0)
-    })
 
     async function handleAddExpense(){
     if(!amount || amount <= 0 || !Number(amount)){
       toast.error("Indtast et deleligt beløb")
+      return
+    }
+    if(!equalShare && amount - members.reduce((accumulator, member) => accumulator + member.share, 0) !== 0) {
+      toast.error("beløb ikke delt helt op")
       return
     }
     try {
@@ -39,6 +39,7 @@
       },
       body: JSON.stringify({amount, currency, comment, shareOverview})
     })  
+    members.map(member => member.share = 0)
     } catch (error) {
       
     }
@@ -47,7 +48,6 @@
 
 <div>
     <input bind:value={amount} type="number" placeholder="beløb">
-    <input bind:checked={changeableAmount} type="checkbox">
     <select bind:value={currency} name="currency" id="currency">
       <Currencies />
       </select> <br>
@@ -55,10 +55,10 @@
       <span>Lige fordeling</span>
       <input bind:checked={equalShare} type="checkbox"> <br>
       {#if !equalShare}
-      <div>Mangler: {amount - members.reduce((accumulator, currentObj) => accumulator + currentObj.share, 0)}</div>
+      <div>Mangler: {amount - members.reduce((accumulator, member) => accumulator + member.share, 0)}</div>
         {#each members as member, i}
         <span>{member.username}</span> <br>
-        <input placeholder={(amount / members.length).toString()} type="number" bind:value={members[i].share}> <br> 
+        <input  type="number" bind:value={members[i].share}> <br> 
         {/each} 
       {/if}
       

@@ -13,7 +13,7 @@
     cursor: pointer;
 }
 .background-div{
-    background-image: url("../../../public/gatekeeper.png");
+    background-image: linear-gradient(#2a2a33, #99514f, #c1894b);
     background-size: contain;
     border-radius: 25px 25px 0 0;
 }

@@ -18,6 +18,8 @@
     group = groupResponse.data
     messages = messagesResponse.data
     members = groupResponse.data.members
+    user = members.find(member => member._userId === $USER_ID)
+    members.map(member => member.share = 0)
   })
 
   async function getMessages(){
@@ -41,7 +43,8 @@
   let message = ""
   let messages = []
   let showModal = false
- 
+  let user
+  
   async function handleSendMessage(){
     try {
       if(!message){
@@ -55,8 +58,9 @@
         "content-type": "application/json"
       },
       body: JSON.stringify({comment: message})
-    })  
-    socket.emit("message-from-client", {groupId: $GROUP_ID, comment: message, _userId: $USER_ID})
+    })
+
+    socket.emit("message-from-client", {groupId: $GROUP_ID, comment: message, _userId: $USER_ID, username: user.username})
     message = ""
     } catch (error) {
       toast.error(error)
@@ -76,6 +80,7 @@
 
   socket.on("new-message", (response) =>{
     messages = [...messages, response.data]
+    console.log(messages)
   })
 </script>
 
