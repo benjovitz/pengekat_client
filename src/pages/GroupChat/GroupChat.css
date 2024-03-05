@@ -14,7 +14,7 @@
   }
 
   .message-from-user{
-    background-color: #0EBEBE;
+    background-color: #f0d9bb;
     justify-self: flex-end;
     border-radius: 25px 0 25px 25px;
     padding: 0 1rem 0 1rem;
@@ -84,6 +84,7 @@
     border-radius: 0 0 8px 8px;
     border-top: solid;
     border-color: black;
+    height: fit-content;
   }
   
   .chat-input{

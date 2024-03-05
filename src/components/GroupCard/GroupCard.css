@@ -13,8 +13,8 @@
     cursor: pointer;
 }
 .background-div{
-    background-image: url("https://media1.thehungryjpeg.com/thumbs2/ori_3745126_4pm9g3aozttnxbb3pwzc9j3sghgrxn1ax5jh76wy_dollar-coins-falling-down-vector-flat-cartoon-gold-coin-illustration-finance-coin-design-currency-isolated.jpg");
-    background-size: cover;
+    background-image: url("../../../public/gatekeeper.png");
+    background-size: contain;
     border-radius: 25px 25px 0 0;
 }
 .negative{
